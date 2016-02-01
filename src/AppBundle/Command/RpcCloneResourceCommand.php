@@ -9,13 +9,13 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Helper\ProgressBar;
 
-class RpcCloneDeviceCommand extends ContainerAwareCommand
+class RpcCloneResourceCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
         $this
-            ->setName('rpc:clone_device')
-            ->setDescription('Remote Procedure Call API - Clone Device')
+            ->setName('rpc:clone_resource')
+            ->setDescription('Remote Procedure Call API - Clone Resource')
             ->addArgument('CIK', InputArgument::REQUIRED, 'Authenticates as the client identified by the given CIK')
             ->addArgument('RID', InputArgument::REQUIRED, 'Rid is the resource identifier to clone')
             ->addOption('scale', null, InputOption::VALUE_REQUIRED, 'Set scale number e.g --scale=10')
