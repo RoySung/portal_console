@@ -4,11 +4,13 @@ require __DIR__.'/vendor/autoload.php';
 use AppBundle\Command\RpcCreateScriptCommand;
 use AppBundle\Command\RpcCloneResourceCommand;
 use AppBundle\Command\RpcListingResourceCommand;
+use AppBundle\Command\RpcInfoResourceCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
 $application->add(new RpcCreateScriptCommand());
 $application->add(new RpcCloneResourceCommand());
 $application->add(new RpcListingResourceCommand());
+$application->add(new RpcInfoResourceCommand());
 $application->run();
 ?>
